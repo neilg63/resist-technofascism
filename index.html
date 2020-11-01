@@ -45,16 +45,43 @@
         margin: 0 auto;
         padding: 0;
       }
-      body,
-      header.top-header {
+      .main-bg,
+      header.top-header .bg {
         background-color: rgba(0, 0, 255, 0.125);
+      }
+      .main-bg {
         background: linear-gradient(
-          90deg,
-          rgba(0, 102, 153, 0.25) 0%,
-          rgba(51, 0, 102, 0.5) 40%,
-          rgba(51, 0, 102, 0.5) 60%,
+          180deg,
+          rgba(51, 0, 102, 0.5) 0%,
           rgba(0, 102, 153, 0.25) 100%
         );
+      }
+      header.top-header .bg {
+        background: linear-gradient(
+          180deg,
+          rgba(0, 102, 153, 0.25) 0%,
+          rgba(51, 0, 102, 0.5) 100%
+        );
+      }
+      body,
+      header.top-header {
+        background-color: white;
+      }
+
+      .main-bg,
+      header.top-header .bg {
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+
+      .main-bg {
+        position: fixed;
+        top: 15vmax;
+      }
+      header.top-header .bg {
+        position: absolute;
+        top: 0;
       }
 
       h1,
@@ -82,7 +109,7 @@
       }
 
       #main {
-        margin: 0 auto;
+        margin: 7.5vmax auto 0 auto;
         z-index: 1;
       }
 
@@ -121,7 +148,7 @@
         display: grid;
         justify-content: center;
         align-items: center;
-        min-height: 100vh;
+        min-height: calc(100vh - 12.5vmax);
         margin: 0 auto;
       }
       .top-header h1 {
@@ -166,7 +193,9 @@
   </head>
   <body>
     <main id="main">
+      <div class="main-bg"></div>
       <header class="top-header">
+        <div class="bg"></div>
         <figure id="logo"></figure>
         <h1>Resist Technofascism</h1>
       </header>
