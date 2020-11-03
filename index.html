@@ -9,11 +9,11 @@
     <meta name="twitter:site" content="@outsider63" />
     <meta
       name="twitter:description"
-      content='"Technofascism is an extreme concentration of power of in a few global technocrats who can exert complete control over a subdued populace. Unlike fascism and Stalinism in the mid 20th century, technofascism is global in scale and uses medical martial law and pervasive surveillance to suppress the independence and freedoms of most human beings."'
+      content="Technofascism is an extreme concentration of power of in a few global technocrats who can exert complete control over a subdued populace. Unlike fascism and Stalinism in the mid 20th century, technofascism is global in scale and uses medical martial law and pervasive surveillance to suppress the independence and freedoms of most human beings."
     />
     <meta
       name="description"
-      content='"echnofascism is an extreme concentration of power of in a few global technocrats who can exert complete control over a subdued populace. Unlike fascism and Stalinism in the mid 20th century, technofascism is global in scale and uses medical martial law and pervasive surveillance to suppress the independence and freedoms of most human beings."'
+      content="Technofascism is an extreme concentration of power of in a few global technocrats who can exert complete control over a subdued populace. Unlike fascism and Stalinism in the mid 20th century, technofascism is global in scale and uses medical martial law and pervasive surveillance to suppress the independence and freedoms of most human beings."
     />
     <meta property="og:type" content="Article" />
     <meta name="twitter:title" content='Resist Technofascism"' />
@@ -73,6 +73,7 @@
       .main-bg,
       header.top-header .bg {
         background-color: rgba(0, 0, 255, 0.125);
+        pointer-events: none;
       }
       .main-bg {
         background: linear-gradient(
@@ -111,8 +112,24 @@
 
       h1,
       h2,
+      h3,
+      h4.notice,
       nav li {
         font-family: "Russo One", sans-serif;
+      }
+
+      h4.notice {
+        margin: 1em auto;
+        padding: 0.5em;
+        border-top: dotted #009966 0.25em;
+        border-bottom: dotted #009966 0.25em;
+        color: #009966;
+      }
+
+      .suggested-links {
+        margin-top: 1.5em;
+        padding-top: 0.5em;
+        border-top: dotted #009966 0.25em;
       }
 
       @keyframes spinlogo {
@@ -161,6 +178,12 @@
         background-position: top left;
         background-size: contain;
         animation: spinlogo 6s ease-in-out 3s 48;
+        user-select: none;
+        transition: filter 5s ease-in-out;
+      }
+
+      .top-header:hover #logo {
+        filter: hue-rotate(180deg);
       }
 
       #logo,
@@ -177,11 +200,19 @@
         margin: 0 auto;
       }
       .top-header h1 {
+        position: relative;
         margin: 0;
         padding: 0.5em 1em 0.5em 0;
         width: calc(100vw - 15vmax);
         font-size: 6vw;
         text-align: center;
+        user-select: none;
+        z-index: 11;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .top-header:hover h1 {
+        transform: skewX(-10deg);
       }
 
       @media screen and (max-width: 1024px) and (orientation: portrait) {
@@ -216,14 +247,22 @@
       #main .inner figure {
         width: 80%;
       }
+      #main > footer,
       #main > article {
         position: relative;
-        top: -20vh;
         max-width: 60em;
         width: 90%;
         margin: auto;
         padding: 1em 2.5%;
+      }
+      #main > article {
+        top: -20vh;
         background-color: white;
+      }
+      #main > footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
       #main figure figcaption {
         margin: 0.5em -7.5em;
@@ -277,14 +316,67 @@
           the development of a better, fairer and greener world, providing
           everyone with all life's necessities and universal basic income.
         </p>
+        <h4 class="notice">
+          This is only a temporary holding page and will soon link with
+          <em>technoresistance.org </em>. This site abhores all authoritarian
+          regimes.
+        </h4>
         <p>
           There's one big problem with this Garden of Eden scenario resembling a
           network of university campuses surrounded by high-tech eco-homes,
           serviced by artficially intelligent robots and interspersed with
-          nature reserves. The majority of people alive today would be
-          superfluous to the needs of our emerging Brave New World.
+          nature reserves. Most people alive today would be superfluous to the
+          needs of our emerging Brave New World and thus forced to accept
+          complete submission to the biotechnological industrial complex with no
+          meaningful bodily and intellectual autonomy. Our lives would be at the
+          mercy of the world's largest corporations. They could not only monitor
+          every aspect of our private, but also decide when and how we procreate
+          and exacly how we children in our care.
         </p>
+        <p>
+          Technofascism means an extreme concentration of power of in a few
+          global technocrats who can exert complete control over a subdued
+          populace with a technocratic elite and a network of middle managers
+          and awareness raisers to help manage the great unwashed. Unlike
+          fascism and Stalinism in the mid 20th century,
+          <em>technofascism</em> is global in scale and uses medical martial law
+          and pervasive surveillance to suppress the independence and freedoms
+          of most of its subjects. A one-world government would transform the
+          whole planet into one nation, from which there would be no easy
+          escape. Like all empires it projects the purported supremacy of its
+          civilisation on all its subjects.
+        </p>
+        <nav class="suggested-links">
+          <h4>Links</h4>
+          <ul>
+            <li>
+              <a href="https://thefatemperor.com/" target="_blank"
+                >Ivor Cummings: The Fat Emperor</a
+              >
+            </li>
+            <li>
+              <a href="https://gbdeclaration.org/" target="_blank"
+                >The Great Barrington Declaration</a
+              >
+            </li>
+            <li>
+              <a href="https://www.vernoncoleman.com/" target="_blank"
+                >Dr Vernon Coleman</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.facebook.com/groups/2012190098915859/"
+                target="_blank"
+                >Saving Scotland on Facebook</a
+              >
+            </li>
+          </ul>
+        </nav>
       </article>
+      <footer class="bottom">
+        <p>@Copyleft: Neil Gardner 2020.</p>
+      </footer>
     </main>
   </body>
 </html>
